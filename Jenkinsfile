@@ -19,11 +19,11 @@ pipeline {
                 sh 'npm run build'
             }
         }
-        stage('Unit Tests') {
-            steps {
-                sh 'npm run test'
-            }
-        }
+        // stage('Unit Tests') {
+        //     steps {
+        //         sh 'npm run test'
+        //     }
+        // }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
