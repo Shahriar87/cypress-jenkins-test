@@ -13,12 +13,12 @@ pipeline {
                 sh 'npm i'
             }
         }
-        stage('Build') {
-            steps {
-                sh 'node -v'
-                sh 'npm run build'
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         sh 'node -v'
+        //         sh 'npm run build'
+        //     }
+        // }
         // stage('Unit Tests') {
         //     steps {
         //         sh 'npm run test'
