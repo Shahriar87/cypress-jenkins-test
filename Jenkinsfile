@@ -38,31 +38,31 @@ pipeline {
     }
 }
 
-pipeline {
-    agent any
+// pipeline {
+//     agent any
 
-    tools {nodejs "node"}
+//     tools {nodejs "node"}
 
-    environment {
-        CHROME_BIN = '/bin/google-chrome'
-    }
+//     environment {
+//         CHROME_BIN = '/bin/google-chrome'
+//     }
 
-    stages {
-        stage('Dependencies') {
-            steps {
-                sh 'npm i'
-            }
-        }
-        stage('e2e Tests') {
-            steps {
-                sh 'npm run cypress:run'
-            }
-        }
-    }
+//     stages {
+//         stage('Dependencies') {
+//             steps {
+//                 sh 'npm i'
+//             }
+//         }
+//         stage('e2e Tests') {
+//             steps {
+//                 sh 'npm run cypress:run'
+//             }
+//         }
+//     }
 
-    post {
-        always {
-            junit 'results/cypress-report.xml'
-        }
-    }
-}
+//     post {
+//         always {
+//             junit 'results/cypress-report.xml'
+//         }
+//     }
+// }
